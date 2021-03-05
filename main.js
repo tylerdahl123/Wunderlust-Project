@@ -2,11 +2,10 @@
 const clientId = '';
 const clientSecret = '';
 const url = '';
-
+ 
 // OpenWeather Info
 const openWeatherKey = '';
 const weatherUrl = '';
-
 // Page Elements
 const $input = $('#city');
 const $submit = $('#button');
@@ -17,8 +16,21 @@ const $weatherDiv = $("#weather1");
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 // Add AJAX functions here:
-const getVenues = () => {
-
+const getVenues = async () => {
+const city = $input.val();
+urlToFetch = `${url}${city}&limit=10&client_id=${clientId}&client_secret=${clientSecret}&v=20180101`;
+try {
+  const response = await fetch(urlToFetch);
+  if (response.ok){
+    const jsonResponse = await response.json();
+    const venues = jsonResponse.response.groups[0].items.map(item => item.venue);
+    console.log(venues);
+    return venues
+  }
+}
+catch (error){
+  console.log(error)
+}
 }
 
 const getForecast = () => {

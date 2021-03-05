@@ -14,7 +14,7 @@
 ## Usage 
 ---
 
- This project helps the user be able to better plan a trip. 
+ To use this project you will need to have an api key from FourSquare and one from OpenWeatherApi.
 ## Tests
 ---
 
