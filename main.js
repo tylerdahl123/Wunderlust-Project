@@ -1,4 +1,3 @@
-//Foursquare API Info
 const clientId = '';
 const clientSecret = '';
 const url = '';
@@ -67,7 +66,7 @@ const venueImgSrc = `${venueIcon.prefix}bg_64${venueIcon.suffix}`;
 const renderForecast = (day) => {
   // Add your code here:
   
-	let weatherContent = '';
+	let weatherContent = createWeatherHTML(day);
   $weatherDiv.append(weatherContent);
 }
 
@@ -79,7 +78,9 @@ const executeSearch = () => {
   getVenues().then(venues =>{
     renderVenues(venues);
   })
-  getForecast()
+  getForecast().then(forecast => {
+    renderForecast(forecast);
+  })
   return false;
 }
 

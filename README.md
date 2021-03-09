@@ -1,4 +1,6 @@
 # Wunderlust
+![Screenshot](screenshots\mainPage.png)
+
 ## Description
  ---
  
@@ -14,7 +16,7 @@
 ## Usage 
 ---
 
- To use this project you will need to have an api key from FourSquare and one from OpenWeatherApi.
+ To use this project you will need to have an API key.secret from FourSquare and one from OpenWeatherApi.
 ## Tests
 ---
 
