@@ -1,5 +1,5 @@
 # Wunderlust
-![Screenshot](screenshots\mainPage.png)
+![Screenshot](screenshots/mainPage.png)
 
 ## Description
  ---
